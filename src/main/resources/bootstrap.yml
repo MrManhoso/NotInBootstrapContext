@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: notInBootstrapContext
+  config-client:
+    enabled: true
+#  security:
+#    reject-not-found: false
+  http:
+    client:
+      read-timeout: 10s
+      ssl:
+        enabled: true
+        client-authentication: WANT
+        trust-store:
+          path: 'file:/path/to/my-cert.p12'
+          password: password
+          type: PKCS12
